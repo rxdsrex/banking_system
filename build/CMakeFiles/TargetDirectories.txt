@@ -1,3 +1,0 @@
-/home/ubuntu/Workspace/cpp/BankingSystem/build/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/Workspace/cpp/BankingSystem/build/CMakeFiles/edit_cache.dir
-/home/ubuntu/Workspace/cpp/BankingSystem/build/CMakeFiles/banking_sytem.dir
