@@ -1,0 +1,31 @@
+[
+{
+  "directory": "/home/ubuntu/Workspace/cpp/BankingSystem/build",
+  "command": "/bin/g++-9   -I../include  -g   -std=gnu++14 -o CMakeFiles/banking_sytem.dir/main.cpp.o -c /home/ubuntu/Workspace/cpp/BankingSystem/main.cpp",
+  "file": "/home/ubuntu/Workspace/cpp/BankingSystem/main.cpp"
+},
+
+{
+  "directory": "/home/ubuntu/Workspace/cpp/BankingSystem/build",
+  "command": "/bin/g++-9   -I../include  -g   -std=gnu++14 -o CMakeFiles/banking_sytem.dir/source/Account.cpp.o -c /home/ubuntu/Workspace/cpp/BankingSystem/source/Account.cpp",
+  "file": "/home/ubuntu/Workspace/cpp/BankingSystem/source/Account.cpp"
+},
+
+{
+  "directory": "/home/ubuntu/Workspace/cpp/BankingSystem/build",
+  "command": "/bin/g++-9   -I../include  -g   -std=gnu++14 -o CMakeFiles/banking_sytem.dir/source/Bank.cpp.o -c /home/ubuntu/Workspace/cpp/BankingSystem/source/Bank.cpp",
+  "file": "/home/ubuntu/Workspace/cpp/BankingSystem/source/Bank.cpp"
+},
+
+{
+  "directory": "/home/ubuntu/Workspace/cpp/BankingSystem/build",
+  "command": "/bin/g++-9   -I../include  -g   -std=gnu++14 -o CMakeFiles/banking_sytem.dir/source/CurrentAccount.cpp.o -c /home/ubuntu/Workspace/cpp/BankingSystem/source/CurrentAccount.cpp",
+  "file": "/home/ubuntu/Workspace/cpp/BankingSystem/source/CurrentAccount.cpp"
+},
+
+{
+  "directory": "/home/ubuntu/Workspace/cpp/BankingSystem/build",
+  "command": "/bin/g++-9   -I../include  -g   -std=gnu++14 -o CMakeFiles/banking_sytem.dir/source/SavingsAccount.cpp.o -c /home/ubuntu/Workspace/cpp/BankingSystem/source/SavingsAccount.cpp",
+  "file": "/home/ubuntu/Workspace/cpp/BankingSystem/source/SavingsAccount.cpp"
+}
+]
