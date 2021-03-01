@@ -13,7 +13,7 @@ class Account {
  public:
 // CONSTRUCTOR
 
-  explicit Account(int = 0, std::string = "", double = 0, std::string = 0);
+  explicit Account(std::string = "", double = 0, std::string = 0);
 
 // OPERATIONS
 
@@ -58,7 +58,7 @@ class Account {
   void SetAccountHolderName(std::string = "");
   void SetAccountBalance(double = 0.0);
   void SetAccountType(std::string = "");
-  void SetAccount(int = 0, std::string = "", double = 0.0, std::string = "");
+  void SetAccount(std::string = "", double = 0.0, std::string = "");
 
   // Getters
   int GetAccountNumber() const;
@@ -73,6 +73,7 @@ class Account {
   std::string mAccountHolderName;
   double mAccountBalance;
   std::string mAccountType;
+  static int sNextAccNum;
 };
 
 // end of class Account

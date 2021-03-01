@@ -1,7 +1,6 @@
 /**  CurrentAccount class inherited from Account class.
  *
  * #include "CurrentAccount.h"
- * Author: Rajnarayan Dutta (rajnarayand@kpit.com)
  *
  */
 
@@ -18,7 +17,7 @@ class CurrentAccount : public Account {
  public:
   static const int minBalance = 500;
 // CONSTRUCTOR
-  explicit CurrentAccount(int = 0, std::string = "", double = 0, std::string = 0);
+  explicit CurrentAccount(std::string = "", double = 0);
 
 // OPERATIONS
 

@@ -4,11 +4,9 @@ using namespace std;
 /* CONSTRUCTOR IMPLEMENTATION */
 
 // CurrentAccount Default + Overloaded Constructor
-CurrentAccount::CurrentAccount(int aAccountNumber,
-                               string aAccountHolderName,
-                               double aAccountBalance, string mAccountType)
-    : Account(aAccountNumber, aAccountHolderName, aAccountBalance,
-              mAccountType) {
+CurrentAccount::CurrentAccount(string aAccountHolderName,
+                               double aAccountBalance)
+    : Account(aAccountHolderName, aAccountBalance, "Current") {
   // base class initialization using member initializer list
 }
 // end CurrentAccount constructor
@@ -17,15 +15,19 @@ CurrentAccount::CurrentAccount(int aAccountNumber,
 
 // Implementing pure virtual function that withdraws amount from CurrentAccount.
 void CurrentAccount::Withdraw(double aAmount) {
-	// TODO: Add biz logic
+  // TODO: Add biz logic
 }
 // end function Withdraw
 
-// Implementing pure virtual function that prints Account details of CurrentAccount
+// Implementing pure virtual function that prints Account details of
+// CurrentAccount
 void CurrentAccount::PrintAccountDetails() const {
-    cout << "-------------- Account Details : Current Account --------------\n"
-       << "Account Number: " << ":" << this->GetAccountNumber() << "\n"
-       << "Account Holder Name: " << ":" << this->GetAccountHolderName() << "\n"
-       << "Account Balance: " << ":" << this->GetAccountBalance() << "\n"
+  cout << "-------------- Account Details : Current Account --------------\n"
+       << "Account Number: "
+       << ":" << this->GetAccountNumber() << "\n"
+       << "Account Holder Name: "
+       << ":" << this->GetAccountHolderName() << "\n"
+       << "Account Balance: "
+       << ":" << this->GetAccountBalance() << "\n"
        << "---------------------------------------------\n";
 }

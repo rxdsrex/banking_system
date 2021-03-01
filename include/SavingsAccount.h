@@ -16,8 +16,7 @@
 class SavingsAccount : public Account {
  public:
 // CONSTRUCTOR
-  explicit SavingsAccount(int = 0, std::string = "", double = 0,
-                          std::string = 0);
+  explicit SavingsAccount(std::string = "", double = 0);
 
 // OPERATIONS
 

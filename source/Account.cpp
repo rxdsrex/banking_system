@@ -1,15 +1,17 @@
 #include "Account.h"
 using namespace std;
 
+int Account::sNextAccNum = 1;
+
 /* CONSTRUCTOR IMPLEMENTATION */
 
-Account::Account(int aAccountNumber, string aAccountHolderName,
+Account::Account(string aAccountHolderName,
                  double aAccountBalance, string mAccountType)
-    : mAccountNumber(aAccountNumber),
+    : mAccountNumber(sNextAccNum++),
       mAccountHolderName(aAccountHolderName),
       mAccountBalance(aAccountBalance),
       mAccountType(mAccountType) {
-  this->SetAccount(aAccountNumber, aAccountHolderName, aAccountBalance,
+  this->SetAccount(aAccountHolderName, aAccountBalance,
                    mAccountType);
 }
 
@@ -48,15 +50,6 @@ ostream& operator<<(ostream& rout, const Account& ref) {
 
 /* ACCESS FUNCTIONS IMPLEMENTATION */
 
-// function that sets the Account Number
-void Account::SetAccountNumber(int aAccountNumber) {
-  if (aAccountNumber < 0.0)
-    throw "ERROR: Account Number cannot be negative.";
-  else
-    this->mAccountNumber = aAccountNumber;
-}
-// end function SetAccountNumber
-
 // function that sets name of Account holder
 void Account::SetAccountHolderName(string aName) {
   if (aName == "")
@@ -85,10 +78,9 @@ void Account::SetAccountType(string aType) {
 // end function SetAccountHolderName
 
 // function that sets Account
-void Account::SetAccount(int aAccountNumber, string aAccountHolderName,
+void Account::SetAccount(string aAccountHolderName,
                          double aAccountBalance, string mAccountType) {
   try {
-    this->SetAccountNumber(aAccountNumber);
     this->SetAccountHolderName(aAccountHolderName);
     this->SetAccountBalance(aAccountBalance);
     this->SetAccountType(mAccountType);
