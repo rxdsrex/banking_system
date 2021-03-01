@@ -12,12 +12,11 @@
 
 class Account {
  public:
-  // CONSTRUCTOR
+// CONSTRUCTOR
 
-  /** Default + Overloaded constructor. */
-  explicit Account(int = 0, std::string = "", double = 0.0);
+  explicit Account(int = 0, std::string = "", double = 0, std::string = 0);
 
-  // OPERATIONS
+// OPERATIONS
 
   /** Function that deposits an amount.
    *
@@ -25,15 +24,7 @@ class Account {
    *
    * @return void
    */
-  void Deposit(double aAmount = 0);
-
-  /** Function that withdraws an amount.
-   *
-   * @param aAmount The amount to be withdrawn.
-   *
-   * @return void
-   */
-  void Withdraw(double aAmount = 0);
+  void Deposit(double aAmount);
 
   /** Function that prints the account balance.
    *
@@ -43,6 +34,14 @@ class Account {
    */
   void PrintBalance() const;
 
+  /** Function that withdraws an amount.
+   *
+   * @param aAmount The amount to be withdrawn.
+   *
+   * @return void
+   */
+  virtual void Withdraw(double aAmount) = 0;
+
   /** Function that prints the account details.
    *
    * @param void
@@ -51,27 +50,22 @@ class Account {
    */
   virtual void PrintAccountDetails() const = 0;
 
-  // friend std::ostream& operator<<(std::ostream&,const Account&);
+  friend std::ostream &operator<<(std::ostream &, const Account &);
 
-  /** Destructor */
-  ~Account();
-
-  // ACCESS FUNCTIONS
+// ACCESS FUNCTIONS
 
   // Setters
   void SetAccountNumber(int = 0);
   void SetAccountHolderName(std::string = "");
   void SetAccountBalance(double = 0.0);
-  void SetAccount(int = 0, std::string = "", double = 0.0);
-  /**
-      # @overload void SetAccount(const Account&);
-      */
-  void SetAccount(const Account &);
+  void SetAccountType(std::string = "");
+  void SetAccount(int = 0, std::string = "", double = 0.0, std::string = "");
 
   // Getters
   int GetAccountNumber() const;
   std::string GetAccountHolderName() const;
   double GetAccountBalance() const;
+  std::string GetAccountType() const;
   const Account &GetAccount() const;
 
  private:
@@ -79,6 +73,7 @@ class Account {
   int mAccountNumber;
   std::string mAccountHolderName;
   double mAccountBalance;
+  std::string mAccountType;
 };
 
 // end of class Account
