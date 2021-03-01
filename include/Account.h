@@ -1,7 +1,6 @@
 /**  Account class header
  *
  * #include "Account.h"
- * Author: Rajnarayan Dutta (rajnarayand@kpit.com)
  *
  */
 
