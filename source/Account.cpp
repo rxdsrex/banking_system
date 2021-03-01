@@ -17,19 +17,6 @@ Account::Account(string aAccountHolderName,
 
 /* OPERATIONS IMPLEMENTATION*/
 
-// function that deposits amount.
-void Account::Deposit(double aAmount) {
-  if (aAmount < 0.0)
-    throw "ERROR: Deposit amount cannot be negative.";
-  else {
-    this->mAccountBalance += aAmount;
-    cout << aAmount
-         << " has been deposited to account #: " << this->GetAccountNumber()
-         << endl;
-  }
-}
-// end function Deposit
-
 // function that prints account balance.
 void Account::PrintBalance() const {
   cout << this->GetAccountNumber() << " has total balance of Rs. "

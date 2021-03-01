@@ -17,14 +17,6 @@ class Account {
 
 // OPERATIONS
 
-  /** Function that deposits an amount.
-   *
-   * @param aAmount The amount to be deposited.
-   *
-   * @return void
-   */
-  void Deposit(double aAmount);
-
   /** Function that prints the account balance.
    *
    * @param void
@@ -32,6 +24,14 @@ class Account {
    * @return void
    */
   void PrintBalance() const;
+
+  /** Function that deposits an amount.
+   *
+   * @param aAmount The amount to be deposited.
+   *
+   * @return void
+   */
+  virtual void Deposit(double aAmount) = 0;
 
   /** Function that withdraws an amount.
    *

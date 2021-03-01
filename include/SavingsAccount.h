@@ -20,6 +20,14 @@ class SavingsAccount : public Account {
 
 // OPERATIONS
 
+  /** Function that deposits an amount.
+   *
+   * @param aAmount The amount to be deposited.
+   *
+   * @return void
+   */
+  void Deposit(double aAmount);
+
   /** Overriding function that withdraws amount from CurrentAccount.
    *
    * @param aAmount The amount to be withdrawn.

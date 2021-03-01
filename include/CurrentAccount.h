@@ -15,11 +15,20 @@
 
 class CurrentAccount : public Account {
  public:
-  static const int minBalance = 500;
+  static const double sMinBalance = 500.0;
+  static const double sLessMinBalanceCharge = 20.0;
 // CONSTRUCTOR
   explicit CurrentAccount(std::string = "", double = 0);
 
 // OPERATIONS
+
+  /** Function that deposits an amount.
+   *
+   * @param aAmount The amount to be deposited.
+   *
+   * @return void
+   */
+  void Deposit(double aAmount);
 
 	/** Overriding function that withdraws amount from CurrentAccount.
 	*
@@ -27,7 +36,7 @@ class CurrentAccount : public Account {
 	*
 	* @return void
 	*/
-	void Withdraw(double aAmount = 0);
+	void Withdraw(double aAmount);
 
   /** Function that prints the account details.
    *
