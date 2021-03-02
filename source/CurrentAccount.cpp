@@ -37,22 +37,28 @@ void CurrentAccount::Withdraw(double aAmount) {
     if ((currentBalance - aAmount) < 0.0) {
       throw "ERROR: You don't have sufficient balance to withdraw the amount.";
     } else if ((currentBalance - aAmount) < sMinBalance) {
-      cout << "You will be charged service charge of Rs. "
+      cout << "\n---------------------------------------------\n"
+           << "You will be charged service charge of Rs. "
            << sLessMinBalanceCharge
-           << " for withdrawing more than minimum limit." << endl;
-      double totalAmount = this->GetAccountBalance() - aAmount - sLessMinBalanceCharge;
+           << " for withdrawing more than minimum limit.\n";
+
+      double totalAmount =
+          this->GetAccountBalance() - aAmount - sLessMinBalanceCharge;
       this->SetAccountBalance(totalAmount);
       cout << "Rs. " << aAmount << " + " << sLessMinBalanceCharge
            << " has been withdrawn from account #: " << this->GetAccountNumber()
            << endl;
       this->PrintBalance();
+      cout << "---------------------------------------------\n";
     } else {
       double totalAmount = this->GetAccountBalance() - aAmount;
       this->SetAccountBalance(totalAmount);
-      cout << "Rs. " << aAmount
+      cout << "\n---------------------------------------------\n"
+           << "Rs. " << aAmount
            << " has been withdrawn from account #: " << this->GetAccountNumber()
            << endl;
       this->PrintBalance();
+      cout << "---------------------------------------------\n";
     }
   }
 }
@@ -61,7 +67,7 @@ void CurrentAccount::Withdraw(double aAmount) {
 // Implementing pure virtual function that prints Account details of
 // CurrentAccount
 void CurrentAccount::PrintAccountDetails() const {
-  cout << "-------------- Account Details : Current Account --------------\n"
+  cout << "\n-------------- Account Details : Current Account --------------\n"
        << "Account Number: "
        << ":" << this->GetAccountNumber() << "\n"
        << "Account Holder Name: "

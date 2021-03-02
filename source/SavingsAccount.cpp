@@ -6,8 +6,7 @@ using namespace std;
 // SavingsAccount Default + Overloaded Constructor
 SavingsAccount::SavingsAccount(string aAccountHolderName,
                                double aAccountBalance)
-    : Account(aAccountHolderName, aAccountBalance,
-              "Savings") {
+    : Account(aAccountHolderName, aAccountBalance, "Savings") {
   // base class initialization using member initializer list
 }
 // end SavingsAccount constructor
@@ -21,10 +20,12 @@ void SavingsAccount::Deposit(double aAmount) {
   else {
     double totalAmount = this->GetAccountBalance() + aAmount;
     this->SetAccountBalance(totalAmount);
-    cout << aAmount
+    cout << "\n---------------------------------------------\n"
+         << aAmount
          << " has been deposited to account #: " << this->GetAccountNumber()
          << endl;
     this->PrintBalance();
+    cout << "---------------------------------------------\n";
   }
 }
 // end function Deposit
@@ -40,10 +41,12 @@ void SavingsAccount::Withdraw(double aAmount) {
     } else {
       double totalAmount = this->GetAccountBalance() - aAmount;
       this->SetAccountBalance(totalAmount);
-      cout << "Rs. " << aAmount
+      cout << "\n---------------------------------------------\n"
+           << "Rs. " << aAmount
            << " has been withdrawn from account #: " << this->GetAccountNumber()
            << endl;
       this->PrintBalance();
+      cout << "---------------------------------------------\n";
     }
   }
 }

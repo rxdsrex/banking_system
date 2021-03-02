@@ -11,7 +11,7 @@
 
 class Account {
  public:
-// CONSTRUCTOR
+ // CONSTRUCTOR/DESTRUCTOR
 
   explicit Account(std::string = "", double = 0, std::string = 0);
 
@@ -51,7 +51,7 @@ class Account {
 
   friend std::ostream &operator<<(std::ostream &, const Account &);
 
-// ACCESS FUNCTIONS
+// ACCESSORS
 
   // Setters
   void SetAccountNumber(int = 0);

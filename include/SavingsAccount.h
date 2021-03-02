@@ -26,7 +26,7 @@ class SavingsAccount : public Account {
    *
    * @return void
    */
-  void Deposit(double aAmount);
+  void Deposit(double aAmount) override;
 
   /** Overriding function that withdraws amount from CurrentAccount.
    *
@@ -34,7 +34,7 @@ class SavingsAccount : public Account {
    *
    * @return void
    */
-  void Withdraw(double aAmount = 0);
+  void Withdraw(double aAmount) override;
 
   /** Function that prints the account details.
    *
@@ -42,7 +42,7 @@ class SavingsAccount : public Account {
    *
    * @return void
    */
-  void PrintAccountDetails() const;
+  void PrintAccountDetails() const override;
 };
 
 // end class SavingsAccount

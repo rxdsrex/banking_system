@@ -5,32 +5,37 @@ int Account::sNextAccNum = 1;
 
 /* CONSTRUCTOR IMPLEMENTATION */
 
-Account::Account(string aAccountHolderName,
-                 double aAccountBalance, string mAccountType)
+Account::Account(string aAccountHolderName, double aAccountBalance,
+                 string mAccountType)
     : mAccountNumber(sNextAccNum++),
       mAccountHolderName(aAccountHolderName),
       mAccountBalance(aAccountBalance),
       mAccountType(mAccountType) {
-  this->SetAccount(aAccountHolderName, aAccountBalance,
-                   mAccountType);
+  this->SetAccount(aAccountHolderName, aAccountBalance, mAccountType);
 }
 
 /* OPERATIONS IMPLEMENTATION*/
 
 // function that prints account balance.
 void Account::PrintBalance() const {
-  cout << this->GetAccountNumber() << " has total balance of Rs. "
-       << this->GetAccountBalance() << " /-." << endl;
+  cout << "\n---------------------------------------------\n"
+       << this->GetAccountNumber() << " has total balance of Rs. "
+       << this->GetAccountBalance() << " /-." << endl
+       << "---------------------------------------------\n";
 }
 // end function PrintBalance
 
 // Overloading << to print account details
 ostream& operator<<(ostream& rout, const Account& ref) {
   rout << "-------------- Account Details --------------\n"
-       << "Account Number: " << ":" << ref.mAccountNumber << "\n"
-       << "Account Holder Name: " << ":" << ref.mAccountHolderName << "\n"
-       << "Account Balance: " << ":" << ref.mAccountBalance << "\n"
-       << "Account Type: " << ":" << ref.mAccountType << "\n"
+       << "Account Number: "
+       << ":" << ref.mAccountNumber << "\n"
+       << "Account Holder Name: "
+       << ":" << ref.mAccountHolderName << "\n"
+       << "Account Balance: "
+       << ":" << ref.mAccountBalance << "\n"
+       << "Account Type: "
+       << ":" << ref.mAccountType << "\n"
        << "---------------------------------------------\n";
   return rout;
 }
@@ -65,8 +70,8 @@ void Account::SetAccountType(string aType) {
 // end function SetAccountHolderName
 
 // function that sets Account
-void Account::SetAccount(string aAccountHolderName,
-                         double aAccountBalance, string mAccountType) {
+void Account::SetAccount(string aAccountHolderName, double aAccountBalance,
+                         string mAccountType) {
   try {
     this->SetAccountHolderName(aAccountHolderName);
     this->SetAccountBalance(aAccountBalance);
