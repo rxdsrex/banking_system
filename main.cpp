@@ -28,6 +28,9 @@ int main(int, char **) {
   localBank->updateAccountNameByAccountNumber(2, "Ankit");
   Account *temp = localBank->GetAccountByAccNum(2);
   std::cout << *temp;
+
+  delete localBank;
   delete temp;
+  
   return 0;
 }

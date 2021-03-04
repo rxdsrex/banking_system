@@ -55,9 +55,9 @@ class Account {
 
   // Setters
   void SetAccountNumber(int = 0);
-  void SetAccountHolderName(std::string = "");
+  void SetAccountHolderName(const std::string& = "");
   void SetAccountBalance(double = 0.0);
-  void SetAccountType(std::string = "");
+  void SetAccountType(const std::string& = "");
   void SetAccount(std::string = "", double = 0.0, std::string = "");
 
   // Getters

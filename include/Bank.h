@@ -22,8 +22,8 @@ class Bank {
    */
   explicit Bank(std::string = "", int = 0);
 
-  void CreateAccount(std::string aAccountHolderName, double aAccountBalance,
-                     std::string aAccountType);
+  void CreateAccount(const std::string& aAccountHolderName, double aAccountBalance,
+                     const std::string& aAccountType);
   void DepositMoneyToAccount(int aAccountNumber, double amount);
   void WithdrawMoneyFromAccount(int aAccountNumber, double amount);
   void printAllAccounts();
@@ -34,7 +34,7 @@ class Bank {
   // ACCESSORS
 
   // setters
-  void SetBankName(const std::string = "");
+  void SetBankName(const std::string& = "");
   void SetBranchCode(int = 0);
   void SetBank(const std::string = "", int = 0);
   /**

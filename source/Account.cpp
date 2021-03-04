@@ -43,7 +43,7 @@ ostream& operator<<(ostream& rout, const Account& ref) {
 /* ACCESS FUNCTIONS IMPLEMENTATION */
 
 // function that sets name of Account holder
-void Account::SetAccountHolderName(string aName) {
+void Account::SetAccountHolderName(const string &aName) {
   if (aName == "")
     throw "ERROR: Account holder name cannot be empty.";
   else
@@ -61,7 +61,7 @@ void Account::SetAccountBalance(double aValue) {
 // end function SetAccountBalance
 
 // function that sets the Account Type
-void Account::SetAccountType(string aType) {
+void Account::SetAccountType(const string &aType) {
   if (aType == "")
     throw "ERROR: Account type cannot be empty.";
   else
@@ -77,7 +77,7 @@ void Account::SetAccount(string aAccountHolderName, double aAccountBalance,
     this->SetAccountBalance(aAccountBalance);
     this->SetAccountType(mAccountType);
   } catch (const char* msg) {
-    throw msg;
+    throw;
   }
 }
 // end function SetAccount

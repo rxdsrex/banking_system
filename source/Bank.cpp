@@ -7,8 +7,8 @@ using namespace std;
 Bank::Bank(std::string aBankName, int aBranchCode)
     : mBankName(aBankName), mBranchCode(aBranchCode) {}
 
-void Bank::CreateAccount(std::string aAccountHolderName, double aAccountBalance,
-                         std::string aAccountType) {
+void Bank::CreateAccount(const std::string& aAccountHolderName, double aAccountBalance,
+                         const std::string& aAccountType) {
   try {
     if (aAccountType == "Current" || aAccountType == "current") {
       Account* currentAccountObj =
@@ -114,7 +114,7 @@ void Bank::updateAccountNameByAccountNumber(int aAccountNumber, std::string mAcc
 
 // Setters
 // function that sets name of Bank
-void Bank::SetBankName(const string aName) { this->mBankName = aName; }
+void Bank::SetBankName(const string& aName) { this->mBankName = aName; }
 // end function SetBankName
 
 // function that sets code of Branch
